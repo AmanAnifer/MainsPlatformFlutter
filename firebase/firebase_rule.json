@@ -1,0 +1,20 @@
+{
+    "rules": {
+        "password": {
+            ".read": true,
+            ".write": false
+        },
+        "questions": {
+            ".read": true,
+            ".write": false
+        },
+        "user_data": {
+            ".read": true,
+            ".write": true
+        },
+        "startTest": {
+            ".read": true,
+            ".write": true
+        }
+    }
+}

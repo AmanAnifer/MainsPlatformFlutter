@@ -1,0 +1,1 @@
+enum WhichTimer { question, password }

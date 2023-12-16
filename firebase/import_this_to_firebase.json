@@ -1,0 +1,33 @@
+{
+    "questions": [
+        {
+            "questionId": "passwordHint",
+            "markdownQuestionString": "### Decrypt the given cipher text\n```urltrrxf```  \nHint: 13 times it ROTs\n"
+        },
+        {
+            "questionId": "question1",
+            "markdownQuestionString": "## Question number {question_number}\nWrite a C/Java/Python function which calculates the roots of a quadratic equation using the quadratic formula.  \nThe function should have three parameters (float a, float b, float c) and should print (both) the root(s), or a relevant error message if the roots can't be found.  \n\nThe function should have the following signature:  \n```\n// In C/Java\nvoid quadratic_formula(float a, float b, float c);\t\n\n// Python\ndef quadratic_formula(a, b, c)\n```\n"
+        },
+        {
+            "questionId": "question2",
+            "markdownQuestionString": "## Question number {question_number}\nWrite a function which accepts a root node object/struct and prints its in-order traversal, but **WITHOUT** using recursion.  \n  \nContext:  \n\nThe node object in Java is \n```java\nclass Node {\n\tint value;\n\tNode left;\t\t// left is null/None if no left subchild\n\tNode right;\t\t// right is null/None if no right subchild\n\tNode(int value, Node left, Node right) {\n\t\tthis.value = value;\n\t\tthis left = left;\n\t\tthis.right = right;\n\t}\n\tNode(int value) {\n\t\tthis.value = value;\n\t\tthis.left = null;\n\t\tthis.right = null;\n\t}\n}\n```\nPython  \n```python\nclass Node:\n\tdef __init__(self, value, left=None, right=None):\n\t\tself.value = value\n\t\tself.left = left\n\t\tself.right = right\n```\n\nNode struct in C is \n```c\nstruct Node {\n\tint value;\n\tNode * left;\t\t// NULL if no child\n\tNode * right;\t\t// NULL if no child\n};\n```\n\nThe function signature should be:\n```\n// In C and Java\nvoid inorder_traversal(Node rootNode);\n\n// Python\ndef inorder_traversal(rootNode)\n\n```\n\nAssume an unlimited global stack is pre-defined on all languages with the following functions available to use anywhere:\n```\npush(Node);\n//Pushes the node on top of the stack\n\npop() or pop(Node *);\n// Returns the top node (assigns to passed address if C).  \n// If no element, returns null/NULL/None\n\nisEmpty();\n//Return 1/True if empty, else 0/False\n```\n\nTip: If you really can't find a way to do it without recursion, do it using recursion. Although we won't give full marks for it\n"
+        },
+        {
+            "questionId": "question3",
+            "markdownQuestionString": "## Question number {question_number}\nWrite a function which accepts two signed integers, and finds the largest among them and returns it. But **WITHOUT** using any branching statements (if, else, ternary operator, switch, loops).  \n  \n\nFunction signature should be:  \n```\n/// In C and Java\nint largest(int a, int b);\n/// In Python\ndef largest(a, b)  // returns int\n```\nHint:  \n* You can assume that the input integers will never be equal, they will always be different\n* Signed integers are represented using 32 bits.  \n* Signed integers are stored in 2's complement form.\n* The most significant (leftmost) bit  holds the sign information, namely, if the integer is positive, it will be 0, if its negative, it will be 1  \n* Right bit shift operator >> can be used to shift the bits, from which we can separate its sign bit.\n* \\>> operator still preserves the overall sign of the integer\n"
+        },
+        {
+            "questionId": "question4",
+            "markdownQuestionString": "## Question number {question_number}\nWrite a function which accepts a string, applies Atbash cipher and prints it.  \nAtbash Cipher is a cipher method which substitutes each letter with its corresponding letter from the reverse of the alphabet.\nie, it uses the following substitution:\n```\na => z\nb => y\nc => x\nd => w\ne => v\n...\nv => e\nw => d\nx => c\ny => b\nz => a\n```\nAssume that all input string is sanitized alphabets of lower case.  \nDo it preferrably without simple substitution using dictionary/maps or a bunch of switch/case or a bunch of if/else conditions.  \n  \nThe function signature should be:\n```\n// C\nvoid atbash(char * plain_text);\n// Python\ndef atbash(plain_text)\n// Java\nvoid atbash(String plain_text);\n```\n\nFor convenience, the following string is defined globally\n```\n// C\nchar * alphabets = \"abcdefg...uvwxyz\";\n// Python\nalphabets = \"abcdefg...uvwxyz\"\n// Java\nString alphabets = \"abcdefg...uvwxyz\"\n```\n"
+        },
+        {
+            "questionId": "question5",
+            "markdownQuestionString": "## Question number {question_number}\nDebug either C or Python code **AND** add comments explaining the fixes\n\n```C\n#include<stdio.h>\nint main()\n{\n integer i,j,k;\n float a[3][3], b[3][3], mul[3][3];\n\n printf(\"Enter elements of first matrix:\\n\");\n for(i=0;i< 3;i++)\n {\n  for(j=0;j< 3;j++)\n  {\n   printf(\"a[%d][d]=\",i,j);\n   scanf(\"%f\", a[i][j]);\n  }\n }\n \n printf(\"Enter elements of second matrix:\\n\");\n for(i=0;i< 3;i++)\n {\n  for(j=0;j< 3;j++);\n  {\n   printf(\"b[%d][%d]=\",i,j);\n   scanf(\"%f\", &b[i][j]);\n  }\n }\n \n for(i=0;i< 3,i++)\n {\n  for(j=0;j< 3;j++)\n  {\n   mul[i][j] = 0;\n   for(k=0;k< 3;k++)\n   {\n    mul[i][j] = mul[i][j] + a[i][k]*b[k][j];\n   }\n  }\n }\n \n print(\"Multiplied matrix is:\\n\");\n for(i=0;i< 3;i++)\n {\n  for(j=0;j< 3;j+)\n  {\n   printf(\"%f\\t\", mul[i][j]);\n  }\n  printf(\"\\n\");\n }\n return 0;\n}\n```  \n\nPython  \n```python\nA=[[0, 0, 0],\n   [0, 0, 0],\n   [0, 0, 0],]\nB=[[0, 0, 0],\n   [0, 0, 0],\n   [0, 0, 0],]\nresult=[[0, 0, 0],\n        [0, 0, 0],\n        [0  0, 0],]\nfor i in range(3):\n\tfor j in range(3):\n\t\ta[i][j] = int(input(f\"A[{i}][{j}]: \"))\nfor i in range(3);\n\tfor j in range(3):\n\t\tB[i][j] = input(int(f\"B[{i}][{j}]: \"))\nfor i in range(A.len):\n\tfor j in range(len(B[0])):\n\t\tfor k in range(len(B)):\n\t\t\tresult[i][j] += A[i][k] * B[k][j]\nfor row in result:\n\tprint(r)\n```\n"
+        }
+    ],
+    "password": "heygeeks",
+    "startTest": false,
+    "user_data": {
+
+    }
+}
