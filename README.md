@@ -39,7 +39,6 @@ All variables should be of the form KEY=VALUE
 * The platform is designed in such a way that even in the case of power failure, the user can resume from where they stopped.  
 * To do this, all the UI states are saved to a database offline, and it uses the given phone number as the key for resuming, so that if a person gets interrupted while writing an answer due to a power failure, after turning it back on, they can resume from exactly where they stopped by asking them to use the same phone number, which will automatically restore everything.  
 * Each time the user click next/previous/ or a question number, the answer is uploaded to firebase so that we, the admin can see them while they're doing it.  
-When 
 * When the user times out, their progress is automatically uploaded
 
 ## Admin Panel <span id="admin_panel"></span>
